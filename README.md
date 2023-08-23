@@ -13,3 +13,6 @@ This is a simple Todo List app built with JavaScript. It allows you to keep trac
    - JavaScript
    - HTML
    - CSS
+
+# Remark
+For this project to function properly, you must utilize Visual Studio's live server extension.
