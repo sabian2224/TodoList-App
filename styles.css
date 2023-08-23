@@ -1,0 +1,59 @@
+body {
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.board-commands {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.element-of-list {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.Check-Box {
+    margin-right: 10px;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}
+
+.Delete-Button {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.Delete-Button:hover {
+    background-color: #c82333;
+}
+
+.Text-Picker,
+.Date-Picker,
+.Update-Button,
+.Text-Picker2,
+.Date-Picker2 {
+    width: 200px;
+    margin-right: 10px;
+}
