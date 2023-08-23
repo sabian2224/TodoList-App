@@ -1,30 +1,43 @@
-
 <!DOCTYPE html>
 <html>
 
-    <head>
-      <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Todo List</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
 
-    <body>
-
-        <h1>Todo List</h1>
-
-        <div class="board-commands">
-            <input class="Text-Picker"  id="todo-title" type="text"/><!--Text Picker-->
-            <input class="Date-Picker"  id="date-picker" type="date"/><!--date picker-->
-            <button id="add-button" onclick="addToDo()">Add Todo</button><!--Add todo button-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mt-4">Todo List</h1>
+            </div>
         </div>
-        
-        <div id="toDoList"></div>
 
-        <script>
-          //MVC(Model,View, Controller) is way to structure our code
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="board-commands mt-4">
+                    <input class="form-control Text-Picker" id="todo-title" type="text" placeholder="Todo Title" />
+                    <input class="form-control Date-Picker" id="date-picker" type="date" />
+                    <button class="btn btn-primary btn-block mt-2" id="add-button" onclick="addToDo()">Add Todo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div id="toDoList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       //MVC(Model,View, Controller) is way to structure our code
            
           //1.MODEL
           //Contain all the code that saves and manages data.
@@ -38,23 +51,6 @@
             todos = savedTodos;
           }
          
-          //How array will look like:
-          /*
-            todos = [{
-                title: 'make dinner',
-                dueDate: '2022,12,2021',
-                id: 'id1'
-             },{
-                title: 'wash the car',
-                dueDate: '2022, 09, 12',
-                id: 'id2'
-             },{
-                title: 'buy bread',
-                dueDate: '2022, 08, 20',
-                id: 'id3'
-             } ];
-             */
-
         
           //Create Todo
           function createTodo(title, dueDate){
@@ -68,6 +64,7 @@
                   title: title,
                   dueDate: dueDate,
                   id: id
+                 
               });
 
               saveTodos();
@@ -110,6 +107,7 @@
              localStorage.setItem('key', JSON.stringify(todos));
            }
 
+          
            //set Editing
            function setEditing(todoId){
 
@@ -306,11 +304,8 @@
             updateTodo(todoId, newTitle, newDate);
             render();
           }
+    </script>
 
-
-         
-        </script>
-
-    </body>
+</body>
 
 </html>
