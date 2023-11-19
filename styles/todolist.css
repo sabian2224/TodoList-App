@@ -14,11 +14,23 @@ h1 {
 }
 
 .element-of-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.todo-title {
+    margin-right: 10px;
+}
+
+.due-date {
+    margin-right: 10px;
 }
 
 .Check-Box {
@@ -52,7 +64,10 @@ h1 {
 
 
 .Text-Picker,
-.Date-Picker,
+.Date-Picker {
+    width: 100%;
+}
+
 .Text-Picker2,
 .Date-Picker2 {
     width: 200px;

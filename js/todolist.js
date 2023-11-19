@@ -153,12 +153,19 @@
                     // and add an "Edit" button.
                 }
                 else{
-                    
-                    const text = todo.title +' ' +todo.dueDate;
+                    const todoTitle = document.createElement('div');
+                    todoTitle.innerText = todo.title;
+                    todoTitle.className = 'todo-title';
+                    element.appendChild(todoTitle);
 
-                    element.innerText = text;
+                    const dueDateDiv = document.createElement('div');
+                    dueDateDiv.innerText = todo.dueDate;
+                    dueDateDiv.className = 'due-date';
+                    element.appendChild(dueDateDiv);
 
-                    
+
+
+                   
                     //Checkbox 
                     const checkbox = document.createElement('input');
                     checkbox.type = 'checkbox';
@@ -214,6 +221,13 @@
               //date picker variable 
               const datePicker = document.getElementById('date-picker');
               const dueDate = datePicker.value;
+
+               // Check if both title and dueDate are not empty
+              if (title.trim() === '' || dueDate.trim() === '') {
+                alert('Please enter both title and due date.');
+                return; // Stop further execution of the function
+              }
+
               
               createTodo(title, dueDate);
               render(); 
