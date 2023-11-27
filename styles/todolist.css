@@ -11,7 +11,32 @@ h1 {
 .board-commands {
     text-align: center;
     margin: 20px auto;
+    display: flex;
+    flex-direction: column;
 }
+
+#todo-title { 
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#date-picker { 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+}
+
+.row>* {
+    padding-right:0;
+    padding-left: 0;
+}
+
+.dashboard { 
+    max-width: 500px;
+}
+
+
+
 
 .element-of-list {
     display: flex;
@@ -79,14 +104,8 @@ h1 {
 
 
 
-.Text-Picker,
-.Date-Picker {
-    width: 100%;
-}
-
 .Text-Picker2,
 .Date-Picker2 {
-    width: 200px;
     margin-right: 10px;
 }
 
