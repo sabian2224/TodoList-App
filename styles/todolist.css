@@ -30,12 +30,20 @@ h1 {
 #todo-title { 
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 #date-picker { 
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
+}
+
+#add-button { 
+    border-top: 1px solid rgb(143, 143, 143);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 
 .row>* {
@@ -45,6 +53,10 @@ h1 {
 
 .dashboard { 
     max-width: 500px;
+}
+
+.add-todo-button { 
+    margin-bottom: 20px;
 }
 
 
@@ -91,19 +103,20 @@ h1 {
 }
 
 .edit-button {
-    background-color: #007bff;
+    background-color: #198754;
     color: #fff;
     border: none;
+    border-radius: 3px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .edit-button:hover {
-    background-color: #0056b3;
+    background-color: #167147;
 }
 
 .Delete-Button {
-    background-color: #dc3545;
+    background-color: gray;
     color: #fff;
     border: none;
     padding: 5px 10px;
