@@ -27,28 +27,17 @@ h1 {
     flex-direction: column;
 }
 
-#todo-title { 
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
+#text-picker-container { 
+    padding-left: 0;
 }
 
-#date-picker { 
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-
+#date-picker-container { 
+    padding-right: 0;
 }
 
-#add-button { 
-    border-top: 1px solid rgb(143, 143, 143);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
 
 .row>* {
-    padding-right:0;
-    padding-left: 0;
+    padding-top: 10px;
 }
 
 .dashboard { 
@@ -57,6 +46,7 @@ h1 {
 
 .add-todo-button { 
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 
@@ -74,9 +64,6 @@ h1 {
 
 }
 
-#add-button{ 
-     width: 100%;
-}
 
 .todo-title {
     font-weight: bold;
@@ -121,12 +108,13 @@ h1 {
     background-color: gray;
     color: #fff;
     border: none;
+    border-radius: 3px;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .Delete-Button:hover {
-    background-color: #c82333;
+    background-color: rgb(110, 110, 110);
 }
 
 
