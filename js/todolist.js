@@ -153,15 +153,22 @@
                     // and add an "Edit" button.
                 }
                 else{
+
                     const todoTitle = document.createElement('div');
                     todoTitle.innerText = todo.title;
                     todoTitle.className = 'todo-title';
                     element.appendChild(todoTitle);
 
+                    let bottomContainer = document.createElement('div');
+                    bottomContainer.className =  'bottom-container';
+
+                    let options = document.createElement('div');
+                    options.className = 'options';
+                    
                     const dueDateDiv = document.createElement('div');
-                    dueDateDiv.innerText = todo.dueDate;
+                    dueDateDiv.innerText ='Due date: ' +todo.dueDate;
                     dueDateDiv.className = 'due-date';
-                    element.appendChild(dueDateDiv);
+                    bottomContainer.appendChild(dueDateDiv);
 
 
 
@@ -178,7 +185,7 @@
                     else{
                         checkbox.checked = false;
                     }
-                    element.appendChild(checkbox);
+                    options.appendChild(checkbox);
 
 
                     //Edit button
@@ -188,7 +195,7 @@
                     editButton.className = 'edit-button';
                     editButton.onclick = onEdit;
                     editButton.dataset.todoId = todo.id;
-                    element.appendChild(editButton);
+                    options.appendChild(editButton);
                      
 
                     //Delete button
@@ -198,7 +205,11 @@
                     deleteButton.style = 'margin-left: 12px';
                     deleteButton.id = todo.id; //ID link
                     deleteButton.onclick = deleteTodo;
-                    element.appendChild(deleteButton);
+                    options.appendChild(deleteButton);
+
+                    bottomContainer.appendChild(options);
+
+                    element.appendChild(bottomContainer);
                 }
                
                 let toDoList = document.getElementById('toDoList');
